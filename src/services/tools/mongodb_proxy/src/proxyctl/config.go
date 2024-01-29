@@ -9,7 +9,7 @@ import (
 var conf proxy.ProxyConfig
 
 func load_config(path string) (config *proxy.ProxyConfig) {
-	data, err := ioutil.ReadFile(path)
+	data, err := os.ReadFile(path)
 	if err != nil {
 		panic(err)
 	}
