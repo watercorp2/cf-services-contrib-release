@@ -40,7 +40,7 @@ func LoadConfig(filename string) (err error) {
 		panic("Config file not exist")
 	}
 	var data []byte
-	if data, err = ioutil.ReadFile(filename); err != nil {
+	if data, err = os.ReadFile(filename); err != nil {
 		return
 	}
 	config = new(ConfigInfo)
